@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sunlight</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}" />
+  </head>
+  <body>
+    <main>
+      <header class="hud">
+        <h1>sunlight</h1>
+        <p>Minimal Sun/Earth visualization</p>
+      </header>
+      <section id="scene-container" aria-label="3D scene"></section>
+    </main>
+
+    <script>
+      window.sceneBodies = {{ scene_bodies | tojson }};
+    </script>
+    <script type="module" src="{{ url_for('static', path='js/main.js') }}"></script>
+  </body>
+</html>
