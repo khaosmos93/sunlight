@@ -1,0 +1,9 @@
+# Core numerical and scientific foundation
+numpy
+scipy
+
+# API and web serving foundation
+fastapi
+uvicorn[standard]
+pydantic
+jinja2
